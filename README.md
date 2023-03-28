@@ -13,4 +13,4 @@ Single Page Application live link:
 
 # Single Page Application:
 
-![image](/images/)
+![image](/spa-image.png)
