@@ -9,8 +9,8 @@
 3. `Bootstrap` : Used for alignment of every component and responsiveness of main content.
 4. `Javascript`: Used for creating the hamburger menu when site go to mobile view and scroll effect on navigation bar.
 
-Single Page Application live link:
+Single Page Application live link: https://6422c60782cc4309a804892b--capable-chimera-140751.netlify.app/
 
 # Single Page Application:
 
-![image](/images/)
+![image](/spa-image.png)
