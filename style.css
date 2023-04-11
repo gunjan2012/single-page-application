@@ -1,0 +1,216 @@
+/* give equal font family and background to whole body part */
+body{
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f6f8f8;
+}
+/* fixed navigation bar */
+.nav-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f6f8f8;
+  z-index: 99;
+  transition: all 0.5s ease-in-out;
+}
+/* navbar items links */
+.nav-menu{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+/* each item's margin from right */
+.menu-item{
+  margin-right: 1rem;
+}
+/* set anchor tag color and text-decoration */
+.nav-lnk{
+  text-decoration: none;
+  color: #3e4242;
+}
+/* main section content */
+.main-content{
+  margin-top: 6rem;
+}
+/* main title style */
+.display-title{
+  font-size: 7rem;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+}
+/* first subtitle */
+.subtitle-1{
+  font-size: 2.3rem;
+  letter-spacing: -0.05em;
+  color: #3e4242;
+}
+/* second subtitle */
+.subtitle-2{
+  font-size: 1.5rem;
+}
+/* section break line */
+.rule-lg{
+  border: none;
+  border-bottom: 4px solid #242929;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+/* each section title */
+.work-title{
+  position: sticky;
+  top: calc(80px + 1rem)
+}
+/* work image */
+.work-image{
+  height: 350px;
+  width: 600px;
+}
+/* image hover effect */
+.work-image:hover{
+  transform: scale(1.05);
+  transition: 1s;
+}
+/* carosal container width */
+.carosal-container{
+  width: 80%;
+}
+/* Blogs image */
+.blog-image{
+  height: 240px;
+  width: 360px;
+}
+/* About heading */
+.header-about{
+  font-size: 4rem;
+}
+/* About images */
+.about-image{
+  width: 200px;
+}
+/* hamburger menu */
+.hamburger{
+  display: block;
+  position: right;
+  width: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+/* hamburger effects when open */
+.hamburger .bar, .hamburger::after, .hamburger::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(0, 0, 0);
+  margin: 6px 0px;
+  transition: 0.4s;
+} 
+/* creating three lines to cross icon  */
+.hamburger.is-active::before{
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+.hamburger.is-active::after{
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+.hamburger.is-active .bar{
+  opacity: 0;
+}
+/* mobile view sidebar  */
+.mob-view{
+  position: fixed;
+  top:0;
+  right: 0;
+  left: 100%;
+  width: 90%;
+  min-height: 100vh;
+  display: block;
+  z-index: 3;
+  background-color: rgb(255, 255, 255);
+  padding-top: 120px;
+  z-index: 98;
+  transition: 0.5s;
+}
+/* shadow effect and space from left */
+.mob-view.is-active{
+  left: 10%;
+  box-shadow: -60px 0 60px 30px rgb(0 0 0 / 60%);
+}
+/* set links in sidebar */
+.mob-view a{
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: black;
+}
+/* site footer */
+.site-footer{
+  background-color: #383E3E;
+  padding:5rem 0;
+  color: white;
+}
+/* link hover effect */
+.pageLink{
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(#5fb6f0 0%, #72c1f5 100%);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.1em;
+  transition: background-size 0.2s ease;
+}
+/* effect when hover on some links */
+.pageLink:hover{
+  background-repeat: repeat;
+  color: black;
+}
+/* scroll events */
+.scroll-down .nav-header{
+  transform: translate3d(0,-100%,0);
+}
+.scroll-up .nav-header{
+  filter: drop-shadow(0 -10px 20px rgb(170,170,170));
+}
+/* Media queries - tablet view*/
+@media screen and (max-width : 767px) {
+  .display-title{
+    font-size: 3rem;
+  }
+  .subtitle{
+    font-size: 1.3rem;
+  }
+  .subtitle-2{
+    font-size: 1rem;
+  }
+  .case-study{
+    padding-top: 1rem;
+  }
+  .nav-menu{
+    display:none;
+  }
+}
+/* mobile view */
+@media screen and (max-width: 425px) {
+  .service-header{
+    justify-content: center;
+    align-items: center;
+  }
+  .work-image{
+    height: 200px;
+    width: 100%;
+  }
+  .carosal-container{
+    width: 100%;
+  }
+}
+/* hamburger not visible in tablet and laptop view */
+@media screen and (min-width: 768px) {
+  .mob-view{
+    display: none; 
+  }
+  .hamburger{
+    display: none;
+  }
+}
